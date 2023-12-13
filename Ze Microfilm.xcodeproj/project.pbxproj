@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8FBDEC0A2B253C3B0049C7BC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC092B253C3B0049C7BC /* App.swift */; };
+		8FBDEC0E2B253C3D0049C7BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBDEC0D2B253C3D0049C7BC /* Assets.xcassets */; };
+		8FBDEC112B253C3D0049C7BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBDEC102B253C3D0049C7BC /* Preview Assets.xcassets */; };
+		8FBDEC252B253C3E0049C7BC /* Ze_MicrofilmUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC242B253C3E0049C7BC /* Ze_MicrofilmUITests.swift */; };
+		8FBDEC272B253C3E0049C7BC /* Ze_MicrofilmUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC262B253C3E0049C7BC /* Ze_MicrofilmUITestsLaunchTests.swift */; };
+		8FBDEC342B253CA20049C7BC /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC332B253CA20049C7BC /* Crypto.swift */; };
+		8FBDEC362B253CD30049C7BC /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC352B253CD30049C7BC /* CryptoTests.swift */; };
+		8FBDEC382B253CF90049C7BC /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC372B253CF90049C7BC /* Record.swift */; };
+		8FBDEC3A2B253FB00049C7BC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC392B253FB00049C7BC /* File.swift */; };
+		8FBDEC3C2B2659830049C7BC /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC3B2B2659830049C7BC /* Hex.swift */; };
+		8FBDEC3E2B2659980049C7BC /* HexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC3D2B2659980049C7BC /* HexTests.swift */; };
+		8FBDEC402B265EB30049C7BC /* RecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC3F2B265EB30049C7BC /* RecordTests.swift */; };
+		8FBDEC432B26651E0049C7BC /* SetUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC422B26651E0049C7BC /* SetUpView.swift */; };
+		8FBDEC452B26675D0049C7BC /* LockedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC442B26675D0049C7BC /* LockedView.swift */; };
+		8FBDEC472B2668370049C7BC /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC462B2668370049C7BC /* ListView.swift */; };
+		8FBDEC4B2B266F8C0049C7BC /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC4A2B266F8C0049C7BC /* AppState.swift */; };
+		8FBDEC4D2B2670980049C7BC /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC4C2B2670980049C7BC /* MainView.swift */; };
+		8FBDEC4F2B2681CA0049C7BC /* RecordRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC4E2B2681CA0049C7BC /* RecordRow.swift */; };
+		8FBDEC512B2682910049C7BC /* RecordDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC502B2682910049C7BC /* RecordDetail.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8FBDEC172B253C3E0049C7BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FBDEBFE2B253C3B0049C7BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FBDEC052B253C3B0049C7BC;
+			remoteInfo = "Ze Microfilm";
+		};
+		8FBDEC212B253C3E0049C7BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8FBDEBFE2B253C3B0049C7BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FBDEC052B253C3B0049C7BC;
+			remoteInfo = "Ze Microfilm";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8FBDEC062B253C3B0049C7BC /* Ze Microfilm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ze Microfilm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FBDEC092B253C3B0049C7BC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		8FBDEC0D2B253C3D0049C7BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8FBDEC102B253C3D0049C7BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		8FBDEC162B253C3E0049C7BC /* Ze MicrofilmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ze MicrofilmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FBDEC202B253C3E0049C7BC /* Ze MicrofilmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ze MicrofilmUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FBDEC242B253C3E0049C7BC /* Ze_MicrofilmUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ze_MicrofilmUITests.swift; sourceTree = "<group>"; };
+		8FBDEC262B253C3E0049C7BC /* Ze_MicrofilmUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ze_MicrofilmUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8FBDEC332B253CA20049C7BC /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
+		8FBDEC352B253CD30049C7BC /* CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
+		8FBDEC372B253CF90049C7BC /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		8FBDEC392B253FB00049C7BC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		8FBDEC3B2B2659830049C7BC /* Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex.swift; sourceTree = "<group>"; };
+		8FBDEC3D2B2659980049C7BC /* HexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexTests.swift; sourceTree = "<group>"; };
+		8FBDEC3F2B265EB30049C7BC /* RecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTests.swift; sourceTree = "<group>"; };
+		8FBDEC422B26651E0049C7BC /* SetUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpView.swift; sourceTree = "<group>"; };
+		8FBDEC442B26675D0049C7BC /* LockedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedView.swift; sourceTree = "<group>"; };
+		8FBDEC462B2668370049C7BC /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		8FBDEC4A2B266F8C0049C7BC /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		8FBDEC4C2B2670980049C7BC /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		8FBDEC4E2B2681CA0049C7BC /* RecordRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordRow.swift; sourceTree = "<group>"; };
+		8FBDEC502B2682910049C7BC /* RecordDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetail.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8FBDEC032B253C3B0049C7BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FBDEC132B253C3E0049C7BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FBDEC1D2B253C3E0049C7BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8FBDEBFD2B253C3B0049C7BC = {
+			isa = PBXGroup;
+			children = (
+				8FBDEC082B253C3B0049C7BC /* Ze Microfilm */,
+				8FBDEC192B253C3E0049C7BC /* Ze MicrofilmTests */,
+				8FBDEC232B253C3E0049C7BC /* Ze MicrofilmUITests */,
+				8FBDEC072B253C3B0049C7BC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8FBDEC072B253C3B0049C7BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDEC062B253C3B0049C7BC /* Ze Microfilm.app */,
+				8FBDEC162B253C3E0049C7BC /* Ze MicrofilmTests.xctest */,
+				8FBDEC202B253C3E0049C7BC /* Ze MicrofilmUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8FBDEC082B253C3B0049C7BC /* Ze Microfilm */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDEC092B253C3B0049C7BC /* App.swift */,
+				8FBDEC392B253FB00049C7BC /* File.swift */,
+				8FBDEC332B253CA20049C7BC /* Crypto.swift */,
+				8FBDEC3B2B2659830049C7BC /* Hex.swift */,
+				8FBDEC372B253CF90049C7BC /* Record.swift */,
+				8FBDEC412B2664CC0049C7BC /* Views */,
+				8FBDEC0D2B253C3D0049C7BC /* Assets.xcassets */,
+				8FBDEC0F2B253C3D0049C7BC /* Preview Content */,
+			);
+			path = "Ze Microfilm";
+			sourceTree = "<group>";
+		};
+		8FBDEC0F2B253C3D0049C7BC /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDEC102B253C3D0049C7BC /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		8FBDEC192B253C3E0049C7BC /* Ze MicrofilmTests */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDEC352B253CD30049C7BC /* CryptoTests.swift */,
+				8FBDEC3D2B2659980049C7BC /* HexTests.swift */,
+				8FBDEC3F2B265EB30049C7BC /* RecordTests.swift */,
+			);
+			path = "Ze MicrofilmTests";
+			sourceTree = "<group>";
+		};
+		8FBDEC232B253C3E0049C7BC /* Ze MicrofilmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDEC242B253C3E0049C7BC /* Ze_MicrofilmUITests.swift */,
+				8FBDEC262B253C3E0049C7BC /* Ze_MicrofilmUITestsLaunchTests.swift */,
+			);
+			path = "Ze MicrofilmUITests";
+			sourceTree = "<group>";
+		};
+		8FBDEC412B2664CC0049C7BC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDEC4A2B266F8C0049C7BC /* AppState.swift */,
+				8FBDEC462B2668370049C7BC /* ListView.swift */,
+				8FBDEC442B26675D0049C7BC /* LockedView.swift */,
+				8FBDEC4C2B2670980049C7BC /* MainView.swift */,
+				8FBDEC4E2B2681CA0049C7BC /* RecordRow.swift */,
+				8FBDEC502B2682910049C7BC /* RecordDetail.swift */,
+				8FBDEC422B26651E0049C7BC /* SetUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8FBDEC052B253C3B0049C7BC /* Ze Microfilm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FBDEC2A2B253C3E0049C7BC /* Build configuration list for PBXNativeTarget "Ze Microfilm" */;
+			buildPhases = (
+				8FBDEC022B253C3B0049C7BC /* Sources */,
+				8FBDEC032B253C3B0049C7BC /* Frameworks */,
+				8FBDEC042B253C3B0049C7BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Ze Microfilm";
+			productName = "Ze Microfilm";
+			productReference = 8FBDEC062B253C3B0049C7BC /* Ze Microfilm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8FBDEC152B253C3E0049C7BC /* Ze MicrofilmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FBDEC2D2B253C3E0049C7BC /* Build configuration list for PBXNativeTarget "Ze MicrofilmTests" */;
+			buildPhases = (
+				8FBDEC122B253C3E0049C7BC /* Sources */,
+				8FBDEC132B253C3E0049C7BC /* Frameworks */,
+				8FBDEC142B253C3E0049C7BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FBDEC182B253C3E0049C7BC /* PBXTargetDependency */,
+			);
+			name = "Ze MicrofilmTests";
+			productName = "Ze MicrofilmTests";
+			productReference = 8FBDEC162B253C3E0049C7BC /* Ze MicrofilmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8FBDEC1F2B253C3E0049C7BC /* Ze MicrofilmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8FBDEC302B253C3E0049C7BC /* Build configuration list for PBXNativeTarget "Ze MicrofilmUITests" */;
+			buildPhases = (
+				8FBDEC1C2B253C3E0049C7BC /* Sources */,
+				8FBDEC1D2B253C3E0049C7BC /* Frameworks */,
+				8FBDEC1E2B253C3E0049C7BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8FBDEC222B253C3E0049C7BC /* PBXTargetDependency */,
+			);
+			name = "Ze MicrofilmUITests";
+			productName = "Ze MicrofilmUITests";
+			productReference = 8FBDEC202B253C3E0049C7BC /* Ze MicrofilmUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8FBDEBFE2B253C3B0049C7BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					8FBDEC052B253C3B0049C7BC = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					8FBDEC152B253C3E0049C7BC = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 8FBDEC052B253C3B0049C7BC;
+					};
+					8FBDEC1F2B253C3E0049C7BC = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 8FBDEC052B253C3B0049C7BC;
+					};
+				};
+			};
+			buildConfigurationList = 8FBDEC012B253C3B0049C7BC /* Build configuration list for PBXProject "Ze Microfilm" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8FBDEBFD2B253C3B0049C7BC;
+			productRefGroup = 8FBDEC072B253C3B0049C7BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8FBDEC052B253C3B0049C7BC /* Ze Microfilm */,
+				8FBDEC152B253C3E0049C7BC /* Ze MicrofilmTests */,
+				8FBDEC1F2B253C3E0049C7BC /* Ze MicrofilmUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8FBDEC042B253C3B0049C7BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FBDEC112B253C3D0049C7BC /* Preview Assets.xcassets in Resources */,
+				8FBDEC0E2B253C3D0049C7BC /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FBDEC142B253C3E0049C7BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FBDEC1E2B253C3E0049C7BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8FBDEC022B253C3B0049C7BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FBDEC452B26675D0049C7BC /* LockedView.swift in Sources */,
+				8FBDEC3A2B253FB00049C7BC /* File.swift in Sources */,
+				8FBDEC432B26651E0049C7BC /* SetUpView.swift in Sources */,
+				8FBDEC342B253CA20049C7BC /* Crypto.swift in Sources */,
+				8FBDEC3C2B2659830049C7BC /* Hex.swift in Sources */,
+				8FBDEC382B253CF90049C7BC /* Record.swift in Sources */,
+				8FBDEC4F2B2681CA0049C7BC /* RecordRow.swift in Sources */,
+				8FBDEC512B2682910049C7BC /* RecordDetail.swift in Sources */,
+				8FBDEC0A2B253C3B0049C7BC /* App.swift in Sources */,
+				8FBDEC4D2B2670980049C7BC /* MainView.swift in Sources */,
+				8FBDEC472B2668370049C7BC /* ListView.swift in Sources */,
+				8FBDEC4B2B266F8C0049C7BC /* AppState.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FBDEC122B253C3E0049C7BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FBDEC362B253CD30049C7BC /* CryptoTests.swift in Sources */,
+				8FBDEC3E2B2659980049C7BC /* HexTests.swift in Sources */,
+				8FBDEC402B265EB30049C7BC /* RecordTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8FBDEC1C2B253C3E0049C7BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FBDEC272B253C3E0049C7BC /* Ze_MicrofilmUITestsLaunchTests.swift in Sources */,
+				8FBDEC252B253C3E0049C7BC /* Ze_MicrofilmUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8FBDEC182B253C3E0049C7BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FBDEC052B253C3B0049C7BC /* Ze Microfilm */;
+			targetProxy = 8FBDEC172B253C3E0049C7BC /* PBXContainerItemProxy */;
+		};
+		8FBDEC222B253C3E0049C7BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FBDEC052B253C3B0049C7BC /* Ze Microfilm */;
+			targetProxy = 8FBDEC212B253C3E0049C7BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8FBDEC282B253C3E0049C7BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8FBDEC292B253C3E0049C7BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8FBDEC2B2B253C3E0049C7BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Ze Microfilm/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gihub.p-jack.Ze-Microfilm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8FBDEC2C2B253C3E0049C7BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Ze Microfilm/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gihub.p-jack.Ze-Microfilm";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8FBDEC2E2B253C3E0049C7BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gihub.p-jack.Ze-MicrofilmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ze Microfilm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ze Microfilm";
+			};
+			name = Debug;
+		};
+		8FBDEC2F2B253C3E0049C7BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gihub.p-jack.Ze-MicrofilmTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_TREAT_WARNINGS_AS_ERRORS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Ze Microfilm.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Ze Microfilm";
+			};
+			name = Release;
+		};
+		8FBDEC312B253C3E0049C7BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gihub.p-jack.Ze-MicrofilmUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Ze Microfilm";
+			};
+			name = Debug;
+		};
+		8FBDEC322B253C3E0049C7BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gihub.p-jack.Ze-MicrofilmUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Ze Microfilm";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8FBDEC012B253C3B0049C7BC /* Build configuration list for PBXProject "Ze Microfilm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FBDEC282B253C3E0049C7BC /* Debug */,
+				8FBDEC292B253C3E0049C7BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FBDEC2A2B253C3E0049C7BC /* Build configuration list for PBXNativeTarget "Ze Microfilm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FBDEC2B2B253C3E0049C7BC /* Debug */,
+				8FBDEC2C2B253C3E0049C7BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FBDEC2D2B253C3E0049C7BC /* Build configuration list for PBXNativeTarget "Ze MicrofilmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FBDEC2E2B253C3E0049C7BC /* Debug */,
+				8FBDEC2F2B253C3E0049C7BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8FBDEC302B253C3E0049C7BC /* Build configuration list for PBXNativeTarget "Ze MicrofilmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8FBDEC312B253C3E0049C7BC /* Debug */,
+				8FBDEC322B253C3E0049C7BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8FBDEBFE2B253C3B0049C7BC /* Project object */;
+}
