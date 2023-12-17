@@ -22,7 +22,9 @@ Although the app is usable in its current form, it needs some love:
 
 1. I'm working with a designer to add some images. Right now I don't even have an app icon.
 2. I'm going to add the ability to bundle the vault into an archived file for transfer to
-   other devices.
-3. I'm also going to integrate with the AuthenticationServices framework so you can directly
+   other devices. The transfer will occur by scanning a QR code on the target device to
+   establish a shared key, using that one-time key to encrypt the archive, then using the
+   MultipeerConnectivity framework to transfer the archive file to the other device.
+4. I'm also going to integrate with the AuthenticationServices framework so you can directly
    access the passwords from Safari and other apps.
 
