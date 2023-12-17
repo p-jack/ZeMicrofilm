@@ -79,7 +79,7 @@ fileprivate class ViewModel:ObservableObject {
   }
   
   private nonisolated func sleep(seconds:UInt64) async {
-    try! await Task.sleep(nanoseconds:seconds*1000*1000*1000)
+    try! await Task.sleep(nanoseconds:seconds*1000_000_000)
   }
 
   func hideToast() async {
@@ -103,8 +103,8 @@ fileprivate class ViewModel:ObservableObject {
     record.password = password
     record.memo = memo
     await app?.save()
-    try! await Task.sleep(nanoseconds:3*1000*1000*1000)
     buttonState = .edit
+    app?.move(to:.unlocked)
   }
   
 }

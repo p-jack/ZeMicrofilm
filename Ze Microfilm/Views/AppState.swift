@@ -16,6 +16,11 @@ final class AppState:ObservableObject {
   // Navigation
   @Published private(set) var place:Place = try! hasPassword() ? .locked : .needsKey
   @Published var record:Record? = nil
+
+  // Timeout lock
+  private var timeoutTask:Task<Void,Error>? = nil
+  @Published var timeoutSeconds:UInt64 = 300
+  @Published var timeoutInterval:ClosedRange<Date> = Date.now...Date.now
   
   // Alerts
   @Published var showAlert = false
@@ -27,14 +32,24 @@ final class AppState:ObservableObject {
   }
   
   func move(to place:Place) {
+    var newPlace = place
+    if place == .unlocked && key == nil {
+      newPlace = .locked
+    }
     withAnimation {
-      self.place = place
+      self.place = newPlace
     }
   }
   
+  // -----
+
   private func presentError() {
+    present(error:"An error occured.")
+  }
+
+  private func present(error:String) {
     alertError = true
-    alertText = "An error occurred."
+    alertText = error
     showAlert = true
   }
   
@@ -63,20 +78,42 @@ final class AppState:ObservableObject {
     return try Record.load(key:key).sorted()
   }
 
+  private func lockLater() {
+    let lastDate = Date(timeInterval:Double(timeoutSeconds), since:Date.now)
+    self.timeoutInterval = Date.now...lastDate
+    self.timeoutTask = Task.detached(priority:.background) {
+      try await Task.sleep(nanoseconds:self.timeoutSeconds * 1_000_000_000)
+      await self.lock()
+      return
+    }
+  }
+
   func unlock(password:String) async {
     do {
       self.key = try await attempt(password)
       if let key = key {
         self.records = try await load(key)
+        lockLater()
         move(to:.unlocked)
       } else {
-        showAlert = true
-        alertError = true
-        alertText = "Incorrect master password. Please try again."
+        present(error:"Incorrect master password. Please try again.")
       }
     } catch {
       presentError()
     }
+  }
+
+  func lock() {
+    if let timeoutTask = self.timeoutTask {
+      timeoutTask.cancel()
+      self.timeoutTask = nil
+    }
+    withAnimation {
+      place = .locked
+    }
+    key = nil
+    records = []
+    record = nil
   }
 
   // -----

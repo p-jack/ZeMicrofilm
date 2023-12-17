@@ -6,12 +6,15 @@ struct ListView: View {
   
   var body: some View {
     NavigationSplitView {
-      List(selection:$app.record) {
-        ForEach(app.records) { record in
-          NavigationLink(value:record) {
-            RecordRow(app:app, record:record)
+      VStack {
+        List(selection:$app.record) {
+          ForEach(app.records) { record in
+            NavigationLink(value:record) {
+              RecordRow(app:app, record:record)
+            }
           }
         }
+        Text(timerInterval:app.timeoutInterval)
       }
       .navigationTitle("Passwords")
       .toolbar {
@@ -32,8 +35,7 @@ struct ListView: View {
   
   func addItem() {
     withAnimation {
-      let record = Record()
-      app.record = record
+      app.record = Record()
     }
   }
   

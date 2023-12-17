@@ -1,10 +1,6 @@
 import CryptoKit
 import Foundation
 
-enum CryptoError:Error {
-  case rng
-}
-
 func randomData(_ bytes:Int) -> Data {
   var data = Data(count:bytes)
   let result = data.withUnsafeMutableBytes {
