@@ -9,7 +9,7 @@ final class CryptoTests:XCTestCase {
       try FileManager.default.removeItem(at:doc($0))
     }
   }
-
+  
   func testCrypto() throws {
     let key = try password2Key("password")
     let uuid = randomData(32)
@@ -26,10 +26,25 @@ final class CryptoTests:XCTestCase {
     XCTAssertEqual(d.memo, plaintext.memo)
   }
   
-  func testTrySetPassword() async throws {
+  func testTrySetPassword() throws {
     let _ = try setPassword("password")
     XCTAssertNil(try tryPassword("pwd"))
     XCTAssertNotNil(try tryPassword("password"))
+  }
+  
+  func testGenerate() throws {
+    let password = try generate()
+    let pieces = password.split(separator:"-")
+    XCTAssertEqual(4, pieces.count)
+    for piece in pieces {
+      XCTAssertEqual(5, piece.count)
+      for ch in piece {
+        XCTAssertTrue(ch.isASCII)
+        XCTAssertTrue(ch.isLetter || ch.isNumber)
+      }
+    }
+    let password2 = try generate()
+    XCTAssertNotEqual(password, password2)
   }
   
 }

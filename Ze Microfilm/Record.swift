@@ -24,12 +24,7 @@ final class Record:Codable,Identifiable,Hashable,Comparable {
     self.uuid = randomData(32)
     self.noise = genNoise()
   }
-  
-  init(uuid:Data) {
-    self.uuid = uuid
-    self.noise = genNoise()
-  }
-  
+    
   var empty:Bool {
     return site == "" && user == "" && password == "" && memo == ""
   }
@@ -39,19 +34,20 @@ final class Record:Codable,Identifiable,Hashable,Comparable {
   static func == (lhs: Record, rhs: Record) -> Bool {
     return lhs.site == rhs.site
     && lhs.user == rhs.user
-    && lhs.memo == rhs.user
+    && lhs.memo == rhs.memo
+    && lhs.uuid == rhs.uuid
   }
   
   static func < (lhs:Record, rhs:Record) -> Bool {
     var x = lhs.site.localizedCompare(rhs.site)
-    if x == .orderedDescending { return true }
     if x == .orderedAscending { return true }
+    if x == .orderedDescending { return false }
     x = lhs.user.localizedCompare(rhs.user)
-    if x == .orderedDescending { return true }
     if x == .orderedAscending { return true }
+    if x == .orderedDescending { return false }
     x = lhs.memo.localizedCompare(rhs.memo)
-    if x == .orderedDescending { return true }
     if x == .orderedAscending { return true }
+    if x == .orderedDescending { return false }
     return lhs.uuid < rhs.uuid
   }
   
@@ -59,6 +55,7 @@ final class Record:Codable,Identifiable,Hashable,Comparable {
     hasher.combine(site)
     hasher.combine(user)
     hasher.combine(memo)
+    hasher.combine(uuid)
   }
   
   func save(key:SymmetricKey) throws {
