@@ -104,7 +104,7 @@ fileprivate class ViewModel:ObservableObject {
     record.memo = memo
     await app?.save()
     buttonState = .edit
-    app?.move(to:.unlocked)
+    app?.record = nil
   }
   
 }
