@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F0640A52B30F62A00A28E10 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0640A42B30F62A00A28E10 /* Data.swift */; };
+		8F0640A72B30F66000A28E10 /* ChaChaPoly.Nonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0640A62B30F66000A28E10 /* ChaChaPoly.Nonce.swift */; };
+		8F0640AA2B30F7DA00A28E10 /* ChaChaPoly.NonceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0640A92B30F7DA00A28E10 /* ChaChaPoly.NonceTests.swift */; };
 		8FBDEC0A2B253C3B0049C7BC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC092B253C3B0049C7BC /* App.swift */; };
 		8FBDEC0E2B253C3D0049C7BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBDEC0D2B253C3D0049C7BC /* Assets.xcassets */; };
 		8FBDEC112B253C3D0049C7BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBDEC102B253C3D0049C7BC /* Preview Assets.xcassets */; };
@@ -46,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8F0640A42B30F62A00A28E10 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		8F0640A62B30F66000A28E10 /* ChaChaPoly.Nonce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaChaPoly.Nonce.swift; sourceTree = "<group>"; };
+		8F0640A92B30F7DA00A28E10 /* ChaChaPoly.NonceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChaChaPoly.NonceTests.swift; sourceTree = "<group>"; };
 		8FBDEC062B253C3B0049C7BC /* Ze Microfilm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ze Microfilm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBDEC092B253C3B0049C7BC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		8FBDEC0D2B253C3D0049C7BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -95,6 +101,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F0640A32B30F5F100A28E10 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8F0640A42B30F62A00A28E10 /* Data.swift */,
+				8F0640A62B30F66000A28E10 /* ChaChaPoly.Nonce.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8F0640A82B30F7B000A28E10 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8F0640A92B30F7DA00A28E10 /* ChaChaPoly.NonceTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		8FBDEBFD2B253C3B0049C7BC = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +146,7 @@
 				8FBDEC332B253CA20049C7BC /* Crypto.swift */,
 				8FBDEC3B2B2659830049C7BC /* Hex.swift */,
 				8FBDEC372B253CF90049C7BC /* Record.swift */,
+				8F0640A32B30F5F100A28E10 /* Extensions */,
 				8FBDEC412B2664CC0049C7BC /* Views */,
 				8FBDEC0D2B253C3D0049C7BC /* Assets.xcassets */,
 				8FBDEC0F2B253C3D0049C7BC /* Preview Content */,
@@ -144,6 +168,7 @@
 				8FBDEC352B253CD30049C7BC /* CryptoTests.swift */,
 				8FBDEC3D2B2659980049C7BC /* HexTests.swift */,
 				8FBDEC3F2B265EB30049C7BC /* RecordTests.swift */,
+				8F0640A82B30F7B000A28E10 /* Extensions */,
 			);
 			path = "Ze MicrofilmTests";
 			sourceTree = "<group>";
@@ -309,7 +334,9 @@
 				8FBDEC382B253CF90049C7BC /* Record.swift in Sources */,
 				8FBDEC4F2B2681CA0049C7BC /* RecordRow.swift in Sources */,
 				8FBDEC512B2682910049C7BC /* RecordDetail.swift in Sources */,
+				8F0640A52B30F62A00A28E10 /* Data.swift in Sources */,
 				8FBDEC0A2B253C3B0049C7BC /* App.swift in Sources */,
+				8F0640A72B30F66000A28E10 /* ChaChaPoly.Nonce.swift in Sources */,
 				8FBDEC4D2B2670980049C7BC /* MainView.swift in Sources */,
 				8FBDEC472B2668370049C7BC /* ListView.swift in Sources */,
 				8FBDEC4B2B266F8C0049C7BC /* AppState.swift in Sources */,
@@ -322,6 +349,7 @@
 			files = (
 				8FBDEC362B253CD30049C7BC /* CryptoTests.swift in Sources */,
 				8FBDEC3E2B2659980049C7BC /* HexTests.swift in Sources */,
+				8F0640AA2B30F7DA00A28E10 /* ChaChaPoly.NonceTests.swift in Sources */,
 				8FBDEC402B265EB30049C7BC /* RecordTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

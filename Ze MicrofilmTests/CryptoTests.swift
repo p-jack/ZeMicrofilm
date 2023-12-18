@@ -18,7 +18,7 @@ final class CryptoTests:XCTestCase {
     d.site = "site"
     d.password = "password"
     d.memo = "memo"
-    let ciphertext = try encrypt(key:key, uuid:uuid, item:d)
+    let ciphertext = try encrypt(key:key, nonce:ChaChaPoly.Nonce(value:0), uuid:uuid, item:d)
     let plaintext:Record = try decrypt(key:key, uuid:uuid, ciphertext:ciphertext)
     XCTAssertEqual(d.user, plaintext.user)
     XCTAssertEqual(d.site, plaintext.site)

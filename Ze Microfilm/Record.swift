@@ -62,7 +62,14 @@ final class Record:Codable,Identifiable,Hashable,Comparable {
   }
   
   func save(key:SymmetricKey) throws {
-    let ciphertext = try encrypt(key:key, uuid:uuid, item:self)
+    let nonce:ChaChaPoly.Nonce
+    if FileManager.default.fileExists(atPath:url.path) {
+      let box = try ChaChaPoly.SealedBox(combined: try Data(contentsOf:url))
+      nonce = box.nonce + 1
+    } else {
+      nonce = ChaChaPoly.Nonce(value:0)
+    }
+    let ciphertext = try encrypt(key:key, nonce:nonce, uuid:uuid, item:self)
     try ciphertext.write(to:url)
   }
   
@@ -94,16 +101,3 @@ final class Record:Codable,Identifiable,Hashable,Comparable {
   
 }
 
-extension Data {
-  static func < (lhs:Data, rhs:Data) -> Bool {
-    let a = Array(lhs)
-    let b = Array(rhs)
-    let n = Swift.min(a.count, b.count)
-    let i = 0
-    while i < n {
-      if a[i] < b[i] { return true }
-      if a[i] > b[i] { return false }
-    }
-    return a.count < b.count
-  }
-}

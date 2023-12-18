@@ -64,7 +64,7 @@ func setPassword(_ password:String) throws -> SymmetricKey {
   let key = try password2Key(password)
   let data = randomData(256)
   let uuid = randomData(32)
-  let ciphertext = try encrypt(key:key, uuid:uuid, item:data)
+  let ciphertext = try encrypt(key:key, nonce:ChaChaPoly.Nonce(value:0), uuid:uuid, item:data)
   try ciphertext.write(to:doc(uuid.hex() + ".key"))
   return key
 }
@@ -82,10 +82,10 @@ func tryPassword(_ password:String) throws -> SymmetricKey? {
   }
 }
 
-func encrypt(key:SymmetricKey, uuid:Data, item:Codable) throws -> Data {
+func encrypt(key:SymmetricKey, nonce:ChaChaPoly.Nonce, uuid:Data, item:Codable) throws -> Data {
   let plaintext = try JSONEncoder().encode(item)
   let derivedKey = HKDF<SHA512>.deriveKey(inputKeyMaterial:key, info:uuid, outputByteCount:32)
-  return try ChaChaPoly.seal(plaintext, using:derivedKey, authenticating:uuid).combined
+  return try ChaChaPoly.seal(plaintext, using:derivedKey, nonce:nonce, authenticating:uuid).combined
 }
 
 func decrypt<T:Codable>(key:SymmetricKey, uuid:Data, ciphertext:Data) throws -> T {
@@ -94,6 +94,3 @@ func decrypt<T:Codable>(key:SymmetricKey, uuid:Data, ciphertext:Data) throws -> 
   let data = try ChaChaPoly.open(box, using:derivedKey, authenticating:uuid)
   return try JSONDecoder().decode(T.self, from:data)
 }
-
-
-
