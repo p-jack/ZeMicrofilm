@@ -1,13 +1,12 @@
 import SwiftUI
 
-struct RecordRow: View {
+struct RecordRow:View {
 
-  @ObservedObject var app:AppState
   var record:Record
 
   var body: some View {
     VStack {
-        Text(record.site)
+      Text(record.site)
 //        Label(record.user)
     }
     .padding()
@@ -15,7 +14,5 @@ struct RecordRow: View {
 }
 
 #Preview {
-  ListView(app:AppState())
+  RecordRow(record:Record())
 }
-
-

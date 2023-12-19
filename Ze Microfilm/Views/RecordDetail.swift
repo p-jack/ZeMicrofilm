@@ -11,21 +11,22 @@ fileprivate enum ButtonState {
 
 @MainActor
 fileprivate class ViewModel:ObservableObject {
-  
-  var app:AppState? = nil {
-    didSet {
-      buttonState = record.empty ? .save : .edit
-      if record.empty {
-        record.password = try! generate()
-      }
-      site = record.site
-      user = record.user
-      password = record.password
-      memo = record.memo
+
+  let app:AppState = AppState.shared
+
+  init() {
+    self.record = app.navigation.record ?? Record()
+    buttonState = record.empty ? .save : .edit
+    if record.empty {
+      record.password = try! generate()
     }
+    site = record.site
+    user = record.user
+    password = record.password
+    memo = record.memo
   }
-  
-  var record:Record { app!.record! }
+
+  var record:Record
   
   @Published var site:String = ""
   @Published var user:String = ""
@@ -35,9 +36,6 @@ fileprivate class ViewModel:ObservableObject {
   @Published var showToast = false
   @Published var alertState:AlertState = .confirm
   @Published var buttonState:ButtonState = .edit
-  
-  init() {
-  }
   
   var alertText:String {
     return alertState == .confirm
@@ -89,12 +87,11 @@ fileprivate class ViewModel:ObservableObject {
   
   func onDelete() {
     alertState = .confirm
-    app?.showAlert = true
+    app.alert.show = true
   }
   
   func delete() async {
-    await app?.delete()
-    app?.record = nil
+    await app.vault.delete(record:record)
   }
   
   func save() async {
@@ -102,23 +99,19 @@ fileprivate class ViewModel:ObservableObject {
     record.user = user
     record.password = password
     record.memo = memo
-    await app?.save()
-    buttonState = .edit
-    app?.record = nil
+    await app.vault.save(record:record)
   }
   
 }
 
 
 struct RecordDetail: View {
-  
-  @ObservedObject var app:AppState
+
+  @ObservedObject var alert = AppState.shared.alert
+  @ObservedObject var vault = AppState.shared.vault
+
   @StateObject private var vm:ViewModel = ViewModel()
   
-  init(app:AppState) {
-    self.app = app
-  }
-
   var body: some View {
     VStack {
       Form {
@@ -176,16 +169,13 @@ struct RecordDetail: View {
       }
     }
     .navigationTitle(vm.site.isEmpty ? "Password" : vm.site)
-    .alert(vm.alertText, isPresented:$app.showAlert) {
+    .alert(vm.alertText, isPresented:$alert.show) {
       if vm.alertState == .confirm {
         Button("Cancel", role:.cancel) {}
         Button("Delete", role:.destructive) { vm.buttonState = .deleting }
       } else {
         Button("OK", role:.cancel) {}
       }
-    }
-    .onAppear() {
-      vm.app = app
     }
   }
   
@@ -209,5 +199,5 @@ struct RecordDetail: View {
 }
 
 #Preview {
-  RecordDetail(app:AppState.preview(with:Record()))
+  RecordDetail()
 }

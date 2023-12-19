@@ -2,7 +2,8 @@ import SwiftUI
 
 struct LockedView:View {
   
-  @ObservedObject var app:AppState
+  @ObservedObject var alert = AppState.shared.alert
+  @ObservedObject var vault = AppState.shared.vault
   
   @State private var password:String = ""
   @State private var spinner = false
@@ -16,17 +17,17 @@ struct LockedView:View {
       }.disabled(spinner)
       if spinner {
         ProgressView().task {
-          await app.unlock(password:password)
+          await vault.unlock(password:password)
           withAnimation { spinner = false }
         }
       }
     }
     .padding()
-    .alert(app.alertText, isPresented:$app.showAlert, actions: {})
+    .alert(alert.text, isPresented:$alert.show, actions:{})
   }
   
 }
 
 #Preview {
-  LockedView(app:AppState())
+  LockedView()
 }

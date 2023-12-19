@@ -2,7 +2,8 @@ import SwiftUI
 
 struct SetUpView: View {
   
-  @ObservedObject var app:AppState
+  @ObservedObject var alert = AppState.shared.alert
+  @ObservedObject var vault = AppState.shared.vault
   
   @State private var password1 = ""
   @State private var password2 = ""
@@ -16,7 +17,7 @@ struct SetUpView: View {
       )
       if spinner {
         ProgressView().task {
-          await app.save(password:password1)
+          await vault.create(password:password1)
         }
       }
       SecureField(
@@ -38,7 +39,7 @@ struct SetUpView: View {
       }.disabled(disabled)
     }
     .padding()
-    .alert(app.alertText, isPresented:$app.showAlert, actions: {})
+    .alert(alert.text, isPresented:$alert.show, actions:{})
   }
   
   func onChange() {
@@ -52,6 +53,6 @@ struct SetUpView: View {
 }
 
 #Preview {
-  SetUpView(app:AppState())
+  SetUpView()
 }
 

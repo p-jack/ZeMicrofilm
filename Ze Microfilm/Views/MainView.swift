@@ -2,22 +2,21 @@ import SwiftUI
 
 struct MainView: View {
   
-  @StateObject var app = AppState()
+  @ObservedObject var navigation = AppState.shared.navigation
   
   var body: some View {
-    switch app.place {
+    switch navigation.place {
     case .needsKey:
-      SetUpView(app:app)
+      SetUpView()
     case .locked:
-      LockedView(app:app)
+      LockedView()
     case .unlocked:
-      ListView(app:app)
+      ListView()
     }
   }
+  
 }
 
 #Preview {
   MainView()
 }
-
-
