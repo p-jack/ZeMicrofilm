@@ -15,6 +15,11 @@
 		8F0640B42B311C9300A28E10 /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0640B32B311C9300A28E10 /* Navigation.swift */; };
 		8F0640B62B311D7400A28E10 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0640B52B311D7400A28E10 /* Alert.swift */; };
 		8F0640B82B313EEE00A28E10 /* TimerFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0640B72B313EEE00A28E10 /* TimerFooter.swift */; };
+		8F0640BB2B3234BD00A28E10 /* TimerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0640BA2B3234BD00A28E10 /* TimerTests.swift */; };
+		8F0640BD2B3238FA00A28E10 /* AlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0640BC2B3238FA00A28E10 /* AlertTests.swift */; };
+		8F0640BF2B323A0100A28E10 /* VaultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F0640BE2B323A0100A28E10 /* VaultTests.swift */; };
+		8F21E9892B325D52006E9DA4 /* Atomics in Frameworks */ = {isa = PBXBuildFile; productRef = 8F21E9882B325D52006E9DA4 /* Atomics */; };
+		8F75B8772B324CC700B67D71 /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F75B8762B324CC700B67D71 /* Files.swift */; };
 		8FBDEC0A2B253C3B0049C7BC /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC092B253C3B0049C7BC /* App.swift */; };
 		8FBDEC0E2B253C3D0049C7BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBDEC0D2B253C3D0049C7BC /* Assets.xcassets */; };
 		8FBDEC112B253C3D0049C7BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FBDEC102B253C3D0049C7BC /* Preview Assets.xcassets */; };
@@ -23,7 +28,6 @@
 		8FBDEC342B253CA20049C7BC /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC332B253CA20049C7BC /* Crypto.swift */; };
 		8FBDEC362B253CD30049C7BC /* CryptoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC352B253CD30049C7BC /* CryptoTests.swift */; };
 		8FBDEC382B253CF90049C7BC /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC372B253CF90049C7BC /* Record.swift */; };
-		8FBDEC3A2B253FB00049C7BC /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC392B253FB00049C7BC /* File.swift */; };
 		8FBDEC3C2B2659830049C7BC /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC3B2B2659830049C7BC /* Hex.swift */; };
 		8FBDEC3E2B2659980049C7BC /* HexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC3D2B2659980049C7BC /* HexTests.swift */; };
 		8FBDEC402B265EB30049C7BC /* RecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FBDEC3F2B265EB30049C7BC /* RecordTests.swift */; };
@@ -62,6 +66,10 @@
 		8F0640B32B311C9300A28E10 /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
 		8F0640B52B311D7400A28E10 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		8F0640B72B313EEE00A28E10 /* TimerFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerFooter.swift; sourceTree = "<group>"; };
+		8F0640BA2B3234BD00A28E10 /* TimerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTests.swift; sourceTree = "<group>"; };
+		8F0640BC2B3238FA00A28E10 /* AlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertTests.swift; sourceTree = "<group>"; };
+		8F0640BE2B323A0100A28E10 /* VaultTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VaultTests.swift; sourceTree = "<group>"; };
+		8F75B8762B324CC700B67D71 /* Files.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		8FBDEC062B253C3B0049C7BC /* Ze Microfilm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ze Microfilm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FBDEC092B253C3B0049C7BC /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		8FBDEC0D2B253C3D0049C7BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,7 +81,6 @@
 		8FBDEC332B253CA20049C7BC /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		8FBDEC352B253CD30049C7BC /* CryptoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTests.swift; sourceTree = "<group>"; };
 		8FBDEC372B253CF90049C7BC /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
-		8FBDEC392B253FB00049C7BC /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		8FBDEC3B2B2659830049C7BC /* Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex.swift; sourceTree = "<group>"; };
 		8FBDEC3D2B2659980049C7BC /* HexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexTests.swift; sourceTree = "<group>"; };
 		8FBDEC3F2B265EB30049C7BC /* RecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTests.swift; sourceTree = "<group>"; };
@@ -91,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F21E9892B325D52006E9DA4 /* Atomics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,9 +151,28 @@
 		8F0640B02B31131300A28E10 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				8FBDEC392B253FB00049C7BC /* File.swift */,
 				8FBDEC332B253CA20049C7BC /* Crypto.swift */,
 				8FBDEC3B2B2659830049C7BC /* Hex.swift */,
+				8F75B8762B324CC700B67D71 /* Files.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8F0640B92B3234A100A28E10 /* State */ = {
+			isa = PBXGroup;
+			children = (
+				8F0640BA2B3234BD00A28E10 /* TimerTests.swift */,
+				8F0640BC2B3238FA00A28E10 /* AlertTests.swift */,
+				8F0640BE2B323A0100A28E10 /* VaultTests.swift */,
+			);
+			path = State;
+			sourceTree = "<group>";
+		};
+		8F0640C02B32476D00A28E10 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8FBDEC352B253CD30049C7BC /* CryptoTests.swift */,
+				8FBDEC3D2B2659980049C7BC /* HexTests.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -196,10 +223,10 @@
 		8FBDEC192B253C3E0049C7BC /* Ze MicrofilmTests */ = {
 			isa = PBXGroup;
 			children = (
-				8FBDEC352B253CD30049C7BC /* CryptoTests.swift */,
-				8FBDEC3D2B2659980049C7BC /* HexTests.swift */,
 				8FBDEC3F2B265EB30049C7BC /* RecordTests.swift */,
 				8F0640A82B30F7B000A28E10 /* Extensions */,
+				8F0640B92B3234A100A28E10 /* State */,
+				8F0640C02B32476D00A28E10 /* Utilities */,
 			);
 			path = "Ze MicrofilmTests";
 			sourceTree = "<group>";
@@ -243,6 +270,9 @@
 			dependencies = (
 			);
 			name = "Ze Microfilm";
+			packageProductDependencies = (
+				8F21E9882B325D52006E9DA4 /* Atomics */,
+			);
 			productName = "Ze Microfilm";
 			productReference = 8FBDEC062B253C3B0049C7BC /* Ze Microfilm.app */;
 			productType = "com.apple.product-type.application";
@@ -315,6 +345,9 @@
 				Base,
 			);
 			mainGroup = 8FBDEBFD2B253C3B0049C7BC;
+			packageReferences = (
+				8F21E9872B325D52006E9DA4 /* XCRemoteSwiftPackageReference "swift-atomics" */,
+			);
 			productRefGroup = 8FBDEC072B253C3B0049C7BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,7 +391,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FBDEC452B26675D0049C7BC /* LockedView.swift in Sources */,
-				8FBDEC3A2B253FB00049C7BC /* File.swift in Sources */,
 				8F0640AF2B31118700A28E10 /* Vault.swift in Sources */,
 				8FBDEC432B26651E0049C7BC /* SetUpView.swift in Sources */,
 				8F0640AD2B31103900A28E10 /* Timer.swift in Sources */,
@@ -367,6 +399,7 @@
 				8FBDEC3C2B2659830049C7BC /* Hex.swift in Sources */,
 				8FBDEC382B253CF90049C7BC /* Record.swift in Sources */,
 				8FBDEC4F2B2681CA0049C7BC /* RecordRow.swift in Sources */,
+				8F75B8772B324CC700B67D71 /* Files.swift in Sources */,
 				8FBDEC512B2682910049C7BC /* RecordDetail.swift in Sources */,
 				8F0640A52B30F62A00A28E10 /* Data.swift in Sources */,
 				8FBDEC0A2B253C3B0049C7BC /* App.swift in Sources */,
@@ -383,10 +416,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F0640BD2B3238FA00A28E10 /* AlertTests.swift in Sources */,
+				8F0640BB2B3234BD00A28E10 /* TimerTests.swift in Sources */,
 				8FBDEC362B253CD30049C7BC /* CryptoTests.swift in Sources */,
 				8FBDEC3E2B2659980049C7BC /* HexTests.swift in Sources */,
 				8F0640AA2B30F7DA00A28E10 /* ChaChaPoly.NonceTests.swift in Sources */,
 				8FBDEC402B265EB30049C7BC /* RecordTests.swift in Sources */,
+				8F0640BF2B323A0100A28E10 /* VaultTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +742,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8F21E9872B325D52006E9DA4 /* XCRemoteSwiftPackageReference "swift-atomics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-atomics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8F21E9882B325D52006E9DA4 /* Atomics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8F21E9872B325D52006E9DA4 /* XCRemoteSwiftPackageReference "swift-atomics" */;
+			productName = Atomics;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8FBDEBFE2B253C3B0049C7BC /* Project object */;
 }

@@ -6,8 +6,8 @@ import XCTest
 final class RecordTests:XCTestCase {
 
   override func setUpWithError() throws {
-    try docs().forEach {
-      try FileManager.default.removeItem(at:doc($0))
+    try files.docs().forEach {
+      try files.delete(files.doc($0))
     }
   }
 
@@ -21,19 +21,20 @@ final class RecordTests:XCTestCase {
     record.password = "password"
     record.memo = "memo"
     try record.save(key:key)
-    var data = try Data(contentsOf:record.url)
+    var data = try files.load(record.url)
     var box = try ChaChaPoly.SealedBox(combined:data)
     XCTAssertEqual(0, box.nonce.value)
 
     records = try Record.load(key:key)
     XCTAssertEqual(1, records.count)
+    if records.isEmpty { return }
     record = records[0]
     XCTAssertEqual("site", record.site)
     XCTAssertEqual("user", record.user)
     XCTAssertEqual("password", record.password)
     XCTAssertEqual("memo", record.memo)
     try record.save(key:key)
-    data = try Data(contentsOf:record.url)
+    data = try files.load(record.url)
     box = try ChaChaPoly.SealedBox(combined:data)
     XCTAssertEqual(1, box.nonce.value)
     

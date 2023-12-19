@@ -1,6 +1,17 @@
 import CryptoKit
 import Foundation
 
+enum CryptoError:LocalizedError {
+  
+  case emptyPassword
+  
+  public var errorDescription: String? {
+    switch self {
+    case .emptyPassword: return "Your master password cannot be empty."
+    }
+  }
+}
+
 func randomData(_ bytes:Int) -> Data {
   var data = Data(count:bytes)
   let result = data.withUnsafeMutableBytes {
@@ -40,20 +51,23 @@ func generate() throws -> String {
 
 
 func loadSalt() throws -> Data {
-  let url = doc("salt.bin")
-  if FileManager.default.fileExists(atPath:url.path) {
-    return try Data(contentsOf:url)
+  let url = files.doc("salt.bin")
+  if files.exists(url) {
+    return try files.load(url)
   }
   let data = randomData(32)
-  try data.write(to:url)
+  try files.save(data, to:url)
   return data
 }
 
 func hasPassword() throws -> Bool {
-  return try docs().filter{$0.hasSuffix(".key")}.first != nil
+  return try files.docs().filter{$0.hasSuffix(".key")}.first != nil
 }
 
 func password2Key(_ password:String) throws -> SymmetricKey {
+  if password.isEmpty {
+    throw CryptoError.emptyPassword
+  }
   let keyMat = SymmetricKey(data:Array(password.utf8))
   let salt = try loadSalt()
   let key = HKDF<SHA512>.deriveKey(inputKeyMaterial:keyMat, salt:salt, outputByteCount:32)
@@ -65,15 +79,16 @@ func setPassword(_ password:String) throws -> SymmetricKey {
   let data = randomData(256)
   let uuid = randomData(32)
   let ciphertext = try encrypt(key:key, nonce:ChaChaPoly.Nonce(value:0), uuid:uuid, item:data)
-  try ciphertext.write(to:doc(uuid.hex() + ".key"))
+  try files.save(ciphertext, to:files.doc(uuid.hex() + ".key"))
   return key
 }
 
 func tryPassword(_ password:String) throws -> SymmetricKey? {
   let key = try password2Key(password)
-  let path = try docs().filter{$0.hasSuffix(".key")}.first!
+  let path = try files.docs().filter{$0.hasSuffix(".key")}.first!
+  print(path)
   let uuid = try path.dropLast(4).hex()
-  let ciphertext = try Data(contentsOf:doc(path))
+  let ciphertext = try files.load(files.doc(path))
   do {
     let _:Data = try decrypt(key:key, uuid:uuid, ciphertext:ciphertext)
     return key

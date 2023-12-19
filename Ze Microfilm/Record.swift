@@ -24,12 +24,12 @@ final class Record:Codable,Identifiable,Hashable,Comparable {
     self.uuid = randomData(32)
     self.noise = genNoise()
   }
-    
+      
   var empty:Bool {
     return site == "" && user == "" && password == "" && memo == ""
   }
   
-  var url:URL { doc(uuid.hex() + ".pwd") }
+  var url:URL { files.doc(uuid.hex() + ".pwd") }
   
   static func == (lhs: Record, rhs: Record) -> Bool {
     return lhs.site == rhs.site
@@ -60,25 +60,25 @@ final class Record:Codable,Identifiable,Hashable,Comparable {
   
   func save(key:SymmetricKey) throws {
     let nonce:ChaChaPoly.Nonce
-    if FileManager.default.fileExists(atPath:url.path) {
-      let box = try ChaChaPoly.SealedBox(combined: try Data(contentsOf:url))
+    if files.exists(url) {
+      let box = try ChaChaPoly.SealedBox(combined: try files.load(url))
       nonce = box.nonce + 1
     } else {
       nonce = ChaChaPoly.Nonce(value:0)
     }
     let ciphertext = try encrypt(key:key, nonce:nonce, uuid:uuid, item:self)
-    try ciphertext.write(to:url)
+    try files.save(ciphertext, to:url)
   }
   
   func delete() throws {
-    try FileManager.default.removeItem(at:url)
+    try files.delete(url)
   }
   
   static func load(key:SymmetricKey) throws -> [Record] {
     var records:[Record] = []
-    try docs().filter{$0.hasSuffix(".pwd")}.forEach{
+    try files.docs().filter{$0.hasSuffix(".pwd")}.forEach{
       do {
-        let data = try Data(contentsOf:doc($0))
+        let data = try files.load(files.doc($0))
         let uuid = try $0.dropLast(4).hex()
         let record:Record = try decrypt(key: key, uuid: uuid, ciphertext: data)
         record.uuid = uuid

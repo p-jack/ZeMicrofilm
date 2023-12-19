@@ -32,7 +32,7 @@ final class Vault:ObservableObject {
       self.key = try await create2(password:password)
       delegate?.vaultCreated()
     } catch {
-      delegate?.present(error:Alert.standard)
+      delegate?.present(error:error.localizedDescription)
     }
   }
   

@@ -5,8 +5,8 @@ import CryptoKit
 final class CryptoTests:XCTestCase {
   
   override func setUpWithError() throws {
-    try docs().forEach {
-      try FileManager.default.removeItem(at:doc($0))
+    try files.docs().forEach {
+      try files.delete(files.doc($0))
     }
   }
   
