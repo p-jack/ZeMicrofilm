@@ -12,11 +12,7 @@ final class Timer:ObservableObject {
   
   private var task:Task<Void,Error>? = nil
   @Published var seconds:UInt64 = 300
-
-  var interval:ClosedRange<Date> {
-    let lastDate = Date(timeInterval:Double(seconds), since:Date.now)
-    return Date.now...lastDate
-  }
+  @Published var interval:ClosedRange<Date> = Date.now...Date.now
 
   func cancel() {
     task?.cancel()
@@ -25,6 +21,8 @@ final class Timer:ObservableObject {
 
   func touch() {
     self.task?.cancel()
+    let lastDate = Date(timeInterval:Double(seconds), since:Date.now)
+    interval = Date.now...lastDate
     self.task = Task.detached(priority:.background) {
       try await Task.sleep(nanoseconds:self.seconds * 1_000_000_000)
       await self.fire()

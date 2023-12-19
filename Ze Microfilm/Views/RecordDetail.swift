@@ -146,6 +146,7 @@ struct RecordDetail: View {
           Text("Actions")
         }
       }
+      TimerFooter()
       if vm.showToast {
         HStack(spacing:0) {
           Spacer()

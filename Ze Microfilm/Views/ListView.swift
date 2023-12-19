@@ -16,7 +16,7 @@ struct ListView: View {
             }
           }
         }
-        Text(timerInterval:timer.interval)
+        TimerFooter()
       }
       .navigationTitle("Passwords")
       .toolbar {
