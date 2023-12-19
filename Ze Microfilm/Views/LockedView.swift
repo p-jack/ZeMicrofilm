@@ -7,11 +7,19 @@ struct LockedView:View {
   
   @State private var password:String = ""
   @State private var spinner = false
+  @FocusState private var focused:Bool
   
   var body: some View {
     VStack {
       Text("Enter your master password to unlock.")
-      SecureField("Master Password", text:$password).disabled(spinner)
+      SecureField("Master Password", text:$password)
+        .disabled(spinner)
+        .focused($focused)
+        .submitLabel(.go)
+        .onAppear() { focused = true }
+        .onSubmit() {
+          if !password.isEmpty { spinner = true }
+        }
       Button("Unlock") {
         withAnimation { spinner = true }
       }.disabled(spinner)
